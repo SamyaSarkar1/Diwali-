@@ -14,10 +14,10 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let particles = [];
-let fireworksInterval; // interval for continuous fireworks
+let fireworksInterval; 
 let diyasTextShown = false;
 
-// Create fireworks
+
 function createFireworks(x, y, colors, type = "normal") {
   const count = 50;
   for (let i = 0; i < count; i++) {
@@ -45,7 +45,7 @@ function createFireworks(x, y, colors, type = "normal") {
   }
 }
 
-// Draw fireworks animation
+
 function drawFireworks() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.2)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -65,30 +65,30 @@ function drawFireworks() {
 }
 drawFireworks();
 
-// CELEBRATE BUTTON
+
 startBtn.addEventListener("click", () => {
   const name = nameInput.value.trim() || "Friend";
   greeting.innerHTML = `🪔🎆Happy Diwali, <span class="username">${name}</span>! 🎆🪔`;
 
   bgMusic.play();
 
-  // show Light All Diyas button
+  
   lightBtn.style.display = "inline-block";
 
-  // Clear previous interval if any
+
   clearInterval(fireworksInterval);
 
-  // Start continuous fireworks
+  
   fireworksInterval = setInterval(() => {
-    // Create multiple types at random positions
+    
     createFireworks(Math.random() * window.innerWidth, Math.random() * window.innerHeight / 2, ["gold", "orange", "red", "blue", "green"], "normal");
     createFireworks(Math.random() * window.innerWidth, Math.random() * window.innerHeight / 2, ["yellow", "pink", "purple", "aqua", "lime"], "star");
     createFireworks(Math.random() * window.innerWidth, Math.random() * window.innerHeight / 2, ["cyan", "white", "violet"], "spiral");
     fireworkSound.play();
-  }, 800); // every 0.8 seconds
+  }, 800); 
 });
 
-// LIGHT ALL DIYAS BUTTON
+
 lightBtn.addEventListener("click", () => {
   diyas.forEach(diya => {
     diya.classList.add("lit");
@@ -105,7 +105,7 @@ lightBtn.addEventListener("click", () => {
   }
 });
 
-// RESET BUTTON
+
 resetBtn.addEventListener("click", () => {
   greeting.innerHTML = "";
   nameInput.value = "";
@@ -117,9 +117,10 @@ resetBtn.addEventListener("click", () => {
   diyasTextShown = false;
   lightBtn.style.display = "none";
   particles = [];
-  clearInterval(fireworksInterval); // stop continuous fireworks
+  clearInterval(fireworksInterval); 
   bgMusic.pause();
   bgMusic.currentTime = 0;
 });
+
 
 
