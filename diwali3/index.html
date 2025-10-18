@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Diwali 🎇</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🪔🎇 Happy Diwali 🪔🎇</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+    <div class="buttons">
+      <button id="startBtn">Start Celebrating</button>
+      <button id="lightBtn" style="display:none;">Light All Diyas</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+    <h2 id="greeting"></h2>
+
+    <div class="diya-section">
+      <div class="diya" id="diya1"></div>
+      <div class="diya" id="diya2"></div>
+      <div class="diya" id="diya3"></div>
+      <div class="diya" id="diya4"></div>
+    </div>
+  </div>
+
+  <footer> 💫Made by Samya Sarkar 💫</footer>
+
+  <canvas id="fireworks"></canvas>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" src="https://cdn.pixabay.com/download/audio/2023/03/28/audio_4a907c53d8.mp3?filename=happy-diwali-festive-music-143393.mp3" loop></audio>
+  
+  <!-- Firework Sound -->
+  <audio id="fireworkSound" src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_0673ab2763.mp3?filename=fireworks-6963.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
